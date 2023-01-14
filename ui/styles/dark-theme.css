@@ -1,0 +1,137 @@
+/* Widgets */
+QFrame {
+    background: transparent;
+}
+
+QGraphicsView {
+    border: none;
+    background: transparent;
+}
+
+QLabel {
+    color: #F0F0F0;
+    background: transparent;
+    padding: 5px;
+    font-size: 10pt;
+}
+
+QMainWindow {
+    background: transparent;
+}
+
+QMenu {
+    background: #212121;
+    color: #F0F0F0;
+    border-radius: 5px;
+    font-size: 10pt;
+    padding: 3px;
+}
+QMenu::disabled {
+    color: #888888;
+}
+QMenu::item {
+    background: transparent;
+    border: none;
+    padding: 3px 15px 3px 15px;
+}
+QMenu::item:selected {
+    background-color: #313131;
+    border-radius: 3px;
+}
+QMenu::icon {
+    padding-left: 5px;
+}
+QMenu::icon:disabled {
+    color: #888888;
+}
+QMenu::separator {
+    background: #313131;
+    max-height: 1px;
+    margin: 5px;
+}
+
+QSlider {
+    background: transparent;
+    margin: 1px;
+}
+QSlider:groove:horizontal {
+    background: #404040;
+    border-radius: 5px;
+    height: 10px;
+}
+QSlider::handle:horizontal {
+	background: #767676;
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+QToolButton {
+    background: transparent;
+    border-radius: 8px;
+    margin: 1px;
+}
+QToolButton:hover {
+    background: #262626;
+}
+QToolButton:pressed {
+    background: #282828;
+}
+
+QToolTip {
+    background: #212121;
+    background-clip: border;
+    color: #F0F0F0;
+    border-radius: 3px;
+    padding: 1px;
+    font-size: 10pt;
+}
+
+/* Buttons */
+QCloseButton, QFullScreenMenu {
+    background: transparent;
+    border-radius: 8px;
+    margin: 1px;
+}
+QCloseButton:hover, QFullScreenMenu:hover {
+    background: rgba(38, 38, 38, 100);
+}
+QCloseButton:pressed, QFullScreenMenu:hover {
+    background: rgba(48, 48, 48, 100);
+}
+
+/* Menus */
+QDropdownMenu {
+    background: #181818;
+    border-radius: 4px;
+    margin: 1px;
+}
+
+QExtendedMenu {
+    background: #181818;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+/* Info */
+QInfoLabel {
+    color: #F0F0F0;
+    background: #242424;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 10pt;
+}
+
+QInfoToolButton {
+    background: #242424;
+    border-radius: 8px;
+    margin: 1px;
+}
+QInfoToolButton:hover {
+    background: #262626;
+}
+QInfoToolButton:pressed {
+    background: #303030;
+}
