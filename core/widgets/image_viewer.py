@@ -5,11 +5,11 @@ from PySide6.QtGui import QPixmap, QPainter, QMouseEvent, QWheelEvent, QResizeEv
 from PySide6.QtWidgets import QGraphicsView
 
 
-def get_factors_old(width: int, height: int):
+def get_factors(width: int, height: int):
     return 1.1 ** (width // 100), (1 / 1.1) ** (height // 100)
 
 
-def get_factors(pixmap_size: QSize, widget_size: QSize):
+def get_factors_beta(pixmap_size: QSize, widget_size: QSize):
     if pixmap_size.width() > widget_size.width() and pixmap_size.height() > widget_size.height():
         if pixmap_size.width() / pixmap_size.height() > widget_size.width() / widget_size.height():
             return 1.1 ** (pixmap_size.width() // 100), 1 / (widget_size.height() / pixmap_size.height())
@@ -80,7 +80,7 @@ class QGraphicsImageView(QGraphicsView):
         self._scale_factor = get_scale(pixmap.size(), self.parent().size())
         self._adjust_factor = self._scale_factor
         self._max_factor, self._min_factor = get_factors(
-            pixmap.size(), self.size()  # pixmap.width(), pixmap.height()
+            pixmap.width(), pixmap.height()
         )
 
         self._rotate_factor = 0
